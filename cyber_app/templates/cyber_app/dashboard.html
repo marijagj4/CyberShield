@@ -1,0 +1,113 @@
+{% extends "cyber_app/base.html" %}
+
+{% block title %}
+    Dashboard | CyberShield
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <p class="section-label">
+        Anonymous data
+    </p>
+
+    <h1>
+        Cyberbullying Dashboard
+    </h1>
+
+    <p>
+        Explore anonymous statistics collected through the platform.
+    </p>
+
+</section>
+
+<section class="statistics-summary">
+
+    <div class="total-card">
+
+        <span>
+            Total reports
+        </span>
+
+        <strong>
+            {{ total_reports }}
+        </strong>
+
+    </div>
+
+</section>
+
+<section class="dashboard-grid">
+
+    <article class="dashboard-card">
+
+        <h2>
+            Reports by bullying type
+        </h2>
+
+        <div class="statistics-list">
+
+            {% for item in type_statistics %}
+
+                <div class="statistics-row">
+
+                    <span>
+                        {{ item.bullying_type|title }}
+                    </span>
+
+                    <strong>
+                        {{ item.total }}
+                    </strong>
+
+                </div>
+
+            {% empty %}
+
+                <p>
+                    No reports available.
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+    </article>
+
+    <article class="dashboard-card">
+
+        <h2>
+            Reports by platform
+        </h2>
+
+        <div class="statistics-list">
+
+            {% for item in platform_statistics %}
+
+                <div class="statistics-row">
+
+                    <span>
+                        {{ item.platform|title }}
+                    </span>
+
+                    <strong>
+                        {{ item.total }}
+                    </strong>
+
+                </div>
+
+            {% empty %}
+
+                <p>
+                    No reports available.
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+    </article>
+
+</section>
+
+{% endblock %}

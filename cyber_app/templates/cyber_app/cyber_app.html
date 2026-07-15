@@ -1,0 +1,33 @@
+{% extends "cyber_app/base.html" %}
+
+{% block title %}
+    Home | CyberShield
+{% endblock %}
+
+{% block content %}
+
+<h1>CyberShield</h1>
+
+<h2>Speak up. Stay safe.</h2>
+
+<p>
+    CyberShield is an educational platform that helps young people
+    recognize bullying and cyberbullying.
+</p>
+
+<p>
+    The platform provides anonymous reporting, educational scenarios
+    and statistics about harmful online behaviour.
+</p>
+
+<a href="{% url 'report_incident' %}">
+    Submit an anonymous report
+</a>
+
+<br><br>
+
+<a href="{% url 'quiz' %}">
+    Start the quiz
+</a>
+
+{% endblock %}

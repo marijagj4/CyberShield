@@ -1,0 +1,159 @@
+{% extends "cyber_app/base.html" %}
+
+{% block title %}
+    Home | CyberShield
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-label">
+            Speak up. Stay safe.
+        </p>
+
+        <h1>
+            Recognize cyberbullying.
+            Protect yourself.
+        </h1>
+
+        <p class="hero-description">
+            CyberShield is an educational platform that helps young people
+            recognize bullying and cyberbullying, learn how to respond safely
+            and understand the importance of asking for help.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                class="button primary-button"
+                href="{% url 'report_incident' %}"
+            >
+                Submit an anonymous report
+            </a>
+
+            <a
+                class="button secondary-button"
+                href="{% url 'quiz' %}"
+            >
+                Start the quiz
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="features-section">
+
+    <div class="section-heading">
+        <p class="section-label">
+            How CyberShield helps
+        </p>
+
+        <h2>
+            Learn, recognize and respond
+        </h2>
+
+        <p>
+            The platform provides simple tools for understanding
+            harmful online behaviour.
+        </p>
+    </div>
+
+    <div class="feature-grid">
+
+        <article class="feature-card">
+            <div class="feature-icon">
+                01
+            </div>
+
+            <h3>
+                Recognize the signs
+            </h3>
+
+            <p>
+                Learn how to identify insults, threats, fake profiles,
+                exclusion and sharing private content without permission.
+            </p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">
+                02
+            </div>
+
+            <h3>
+                Report anonymously
+            </h3>
+
+            <p>
+                Submit an anonymous report without including names,
+                usernames, phone numbers or other personal information.
+            </p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">
+                03
+            </div>
+
+            <h3>
+                Practice safe responses
+            </h3>
+
+            <p>
+                Complete interactive scenarios and learn which response
+                is safest in different cyberbullying situations.
+            </p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">
+                04
+            </div>
+
+            <h3>
+                Explore statistics
+            </h3>
+
+            <p>
+                View anonymous statistics about the most common forms
+                of cyberbullying and the platforms where they happen.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="safety-section">
+
+    <div>
+        <p class="section-label">
+            Remember
+        </p>
+
+        <h2>
+            You do not have to handle cyberbullying alone.
+        </h2>
+
+        <p>
+            Save evidence, block and report harmful accounts, and talk
+            to a trusted adult, teacher or school counsellor.
+        </p>
+    </div>
+
+    <a
+        class="button primary-button"
+        href="{% url 'report_incident' %}"
+    >
+        Report a situation
+    </a>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "cyber_app/base.html" %}
+
+{% block title %}
+    Anonymous Report | CyberShield
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <p class="section-label">
+        Safe reporting
+    </p>
+
+    <h1>
+        Anonymous Cyberbullying Report
+    </h1>
+
+    <p>
+        This report is used only for educational statistics.
+        Do not enter names, usernames, addresses, phone numbers
+        or other identifying information.
+    </p>
+
+</section>
+
+<section class="form-section">
+
+    <form method="post" class="report-form">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button
+            type="submit"
+            class="button primary-button"
+        >
+            Submit anonymous report
+        </button>
+
+    </form>
+
+    <aside class="information-card">
+
+        <h2>
+            What should you do?
+        </h2>
+
+        <ul>
+            <li>
+                Save screenshots or other evidence.
+            </li>
+
+            <li>
+                Do not respond while you are angry or upset.
+            </li>
+
+            <li>
+                Block and report the account.
+            </li>
+
+            <li>
+                Tell a trusted adult, teacher or counsellor.
+            </li>
+        </ul>
+
+        <p class="privacy-note">
+            Never include private information in this form.
+        </p>
+
+    </aside>
+
+</section>
+
+{% endblock %}

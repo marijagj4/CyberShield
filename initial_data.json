@@ -1,0 +1,86 @@
+[
+{
+  "model": "cyber_app.scenario",
+  "pk": 1,
+  "fields": {
+    "question": "Someone posts an embarrassing photo of you in a group chat without your permission. What is the safest response?",
+    "option_a": "Post an embarrassing photo of them as revenge.",
+    "option_b": "Save evidence, report the post and tell a trusted adult.",
+    "option_c": "Ignore it and tell nobody.",
+    "correct_option": "B",
+    "explanation": "Saving evidence and asking for support is safer than taking revenge or dealing with the situation alone."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 3,
+  "fields": {
+    "question": "A classmate repeatedly sends insulting messages and says that nobody likes you. What is the safest response?",
+    "option_a": "Reply with even worse insults.",
+    "option_b": "Save the messages, block the sender and ask for help.",
+    "option_c": "Delete the messages immediately and say nothing.",
+    "correct_option": "B",
+    "explanation": "Keeping evidence, blocking the sender and asking for support can help stop repeated cyberbullying."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 4,
+  "fields": {
+    "question": "Someone threatens to share your private messages unless you do what they ask. What should you do?",
+    "option_a": "Do everything they ask so they stop.",
+    "option_b": "Send them your password.",
+    "option_c": "Stop responding, save evidence and immediately tell a trusted adult.",
+    "correct_option": "C",
+    "explanation": "Threats and pressure should be taken seriously. Do not follow the sender's demands or share more private information."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 6,
+  "fields": {
+    "question": "Your friends exclude one student from an online group and encourage you to make fun of them. What should you do?",
+    "option_a": "Join them so they do not exclude you too.",
+    "option_b": "Refuse to participate, support the student and report the situation if needed.",
+    "option_c": "Share screenshots with more people.",
+    "correct_option": "B",
+    "explanation": "Refusing to participate and supporting the targeted student can help stop group cyberbullying."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 7,
+  "fields": {
+    "question": "You receive a cruel comment under your photo from an unknown account. What is the safest response?",
+    "option_a": "Reply with another cruel comment.",
+    "option_b": "Save the comment, block and report the account.",
+    "option_c": "Share the comment with everyone.",
+    "correct_option": "B",
+    "explanation": "Blocking and reporting the account is safer than replying or spreading the harmful content further."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 8,
+  "fields": {
+    "question": "A friend sends you a screenshot of another student’s private conversation and asks you to share it. What should you do?",
+    "option_a": "Share it because everyone else is doing it.",
+    "option_b": "Do not share it and tell your friend that private messages should stay private.",
+    "option_c": "Edit the screenshot and post it as a joke.",
+    "correct_option": "B",
+    "explanation": "Sharing private conversations without permission can harm someone and may be a form of cyberbullying."
+  }
+},
+{
+  "model": "cyber_app.scenario",
+  "pk": 9,
+  "fields": {
+    "question": "Someone keeps adding you to group chats where people make fun of you. What should you do?",
+    "option_a": "Leave the group, save evidence, block the accounts and ask for help.",
+    "option_b": "Stay in the group and insult them back.",
+    "option_c": "Give them your password so they stop.",
+    "correct_option": "A",
+    "explanation": "Leaving the group, saving evidence and asking for support can help protect you from repeated harassment."
+  }
+}
+]

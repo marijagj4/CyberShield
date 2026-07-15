@@ -1,0 +1,170 @@
+{% extends "cyber_app/base.html" %}
+
+{% block title %}
+    Quiz | CyberShield
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <p class="section-label">
+        Learn through scenarios
+    </p>
+
+    <h1>
+        Cyberbullying Safety Quiz
+    </h1>
+
+    <p>
+        Choose the safest response for every situation.
+    </p>
+
+</section>
+
+{% if scenarios %}
+
+<form method="post" class="quiz-form">
+
+    {% csrf_token %}
+
+    {% for scenario in scenarios %}
+
+        <article class="quiz-card">
+
+            <div class="quiz-number">
+                Scenario {{ forloop.counter }}
+            </div>
+
+            <h2>
+                {{ scenario.question }}
+            </h2>
+
+            <label class="quiz-option">
+
+                <input
+                    type="radio"
+                    name="scenario_{{ scenario.id }}"
+                    value="A"
+                    required
+                >
+
+                <span>
+                    {{ scenario.option_a }}
+                </span>
+
+            </label>
+
+            <label class="quiz-option">
+
+                <input
+                    type="radio"
+                    name="scenario_{{ scenario.id }}"
+                    value="B"
+                >
+
+                <span>
+                    {{ scenario.option_b }}
+                </span>
+
+            </label>
+
+            <label class="quiz-option">
+
+                <input
+                    type="radio"
+                    name="scenario_{{ scenario.id }}"
+                    value="C"
+                >
+
+                <span>
+                    {{ scenario.option_c }}
+                </span>
+
+            </label>
+
+        </article>
+
+    {% endfor %}
+
+    <button
+        type="submit"
+        class="button primary-button"
+    >
+        Check answers
+    </button>
+
+</form>
+
+{% else %}
+
+<div class="empty-state">
+
+    <h2>
+        No scenarios available
+    </h2>
+
+    <p>
+        Add scenarios through the Django administration panel.
+    </p>
+
+</div>
+
+{% endif %}
+
+{% if submitted %}
+
+<section class="results-section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            Your results
+        </p>
+
+        <h2>
+            Quiz feedback
+        </h2>
+
+    </div>
+
+    {% for result in results %}
+
+        <article class="result-card">
+
+            <h3>
+                Scenario {{ forloop.counter }}
+            </h3>
+
+            {% if result.is_correct %}
+
+                <p class="correct-result">
+                    Correct answer
+                </p>
+
+            {% else %}
+
+                <p class="incorrect-result">
+                    This was not the safest response
+                </p>
+
+            {% endif %}
+
+            <p>
+                <strong>Correct option:</strong>
+                {{ result.scenario.correct_option }}
+            </p>
+
+            <p>
+                {{ result.scenario.explanation }}
+            </p>
+
+        </article>
+
+    {% endfor %}
+
+</section>
+
+{% endif %}
+
+{% endblock %}
