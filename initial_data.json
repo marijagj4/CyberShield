@@ -63,7 +63,7 @@
   "model": "cyber_app.scenario",
   "pk": 8,
   "fields": {
-    "question": "A friend sends you a screenshot of another student’s private conversation and asks you to share it. What should you do?",
+    "question": "A friend sends you a screenshot of another studentï¿½s private conversation and asks you to share it. What should you do?",
     "option_a": "Share it because everyone else is doing it.",
     "option_b": "Do not share it and tell your friend that private messages should stay private.",
     "option_c": "Edit the screenshot and post it as a joke.",
